@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, Typography, Box, Avatar, Stack } from '@mui/material';
+import { Grid, Card, Typography, Box, Avatar, Stack } from '@mui/material';
 import { cssVars } from '@/theme/cssVars';
 
 type Experience = {
@@ -26,16 +26,12 @@ export default function WorkExperienceCard({ experience }: { experience: Experie
   const { role, company, dateStart, dateEnd, techStack, location, logo } = experience;
 
   return (
-    <Card
-      variant="outlined"
+    <Grid
+    size={{sm:12, md: 6, lg:4}}
       sx={{
         backgroundColor: cssVars.bgSurface,
         color: cssVars.textPrimary,
         borderRadius: 3,
-        maxWidth: 400,
-        minWidth: 400,
-        minHeight: 200,
-        maxHeight: 200,
         padding: 3,
         boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
         transition: 'box-shadow 0.3s ease',
@@ -44,11 +40,14 @@ export default function WorkExperienceCard({ experience }: { experience: Experie
         },
         display: 'flex',
         flexDirection: 'column',
+        position: 'relative',
+        overflow: 'visible',
         gap: 2,
       }}
     >
+        <Avatar src={logo} alt={company} sx={{ width: 54, height: 54, right: '-15px', top:'-15px', position: 'absolute' }} />
       {/* Top Section */}
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+      <Stack direction="row" justifyContent="space-between" position={'relative'} overflow={'visible'} alignItems="center">
         <Box>
           <Typography fontWeight={500}>
             {company}
@@ -57,7 +56,6 @@ export default function WorkExperienceCard({ experience }: { experience: Experie
             {role} • {location}
           </Typography>
         </Box>
-        <Avatar src={logo} alt={company} sx={{ width: 32, height: 32, position: 'relative'}} />
       </Stack>
       <Box display="flex" flexDirection="column" gap={1}>
         <Typography variant="body2" fontStyle="italic">
@@ -70,6 +68,6 @@ export default function WorkExperienceCard({ experience }: { experience: Experie
           </Box>
         </Typography>
       </Box>
-    </Card>
+    </Grid>
   );
 }

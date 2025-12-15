@@ -1,5 +1,5 @@
 'use client';
-import About from "@/components/Version2/About";
+import About from "@/components/About";
 import ExperienceCard from "@/components/ExperienceCard";
 import ExperienceSection from "@/components/ExperienceSection";
 import { theme } from "@/theme";
@@ -30,7 +30,14 @@ const experiences = [
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
+      <Grid className="flex flex-col md:flex-row gap-6">
+        <Grid className="md:w-1/2 lg:w-1/3">
           <About />
+        </Grid>
+        <Grid className="md:w-1/2 lg:w-2/3">
+          <ExperienceSection />
+        </Grid>
+      </Grid>
     </ThemeProvider>
   );
 }
