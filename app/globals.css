@@ -11,6 +11,13 @@
 --accent-yellow: #BF8700;    /* Warm yellow for warnings */
 --border: #D0D7DE;     
 }
+::-webkit-scrollbar{
+  width:5px
+}
+::-webkit-scrollbar-thumb{
+background-color: #6E7781;
+border-radius: 5px;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

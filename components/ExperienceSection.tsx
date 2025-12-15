@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ExperienceCard from './ExperienceCard';
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
+import { Block } from '@mui/icons-material';
 
 const experiences = [
   {
@@ -10,7 +11,7 @@ const experiences = [
     dateEnd: 'Present',
     techStack: '.Net Core, Github, Kubernetes, React, Sql Server',
     location: 'BGC, Taguig City, Philippines',
-    logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQH_Sj9ZfN8pAQ/company-logo_200_200/company-logo_200_200/0/1642704101327/essilorluxottica_logo?e=1762992000&v=beta&t=faeYk2qDJE504bQtGXz4o3b8aVGD_l-m7Dpc1Bby1bQ'
+    logo: 'Company/Essilor.png'
   },
   {
     role: 'Lead Software Engineer',
@@ -19,8 +20,8 @@ const experiences = [
     dateEnd: 'December 2023',
     techStack: ',Net Core, RazorPages, Javascript, HTML& CSS',
     location: 'BGC, Taguig City, Philippines',
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQEgtOEcxlXMog/company-logo_200_200/B4DZfqEQWkHAAQ-/0/1751978673981/accenture_logo?e=1762992000&v=beta&t=SpVaRJKt08wY-ihomVD6gdKuPSxaVqzETcb5MykhCAI'
-  },
+    logo: 'Company/Acn.png'
+   },
   {
     role: 'Senior FullStack Developer',
     company: 'ConnectOs',
@@ -28,7 +29,7 @@ const experiences = [
     dateEnd: 'October 2022',
     techStack: 'Jenkins, .Net, Javascript, HTML & CSS',
     location: 'BGC, Taguig City, Philippines',
-    logo: 'https://media.licdn.com/dms/image/v2/D560BAQHhq6KNwpJBxQ/company-logo_200_200/company-logo_200_200/0/1687384770756?e=1762992000&v=beta&t=8ysHXgz_h1sYAnNm6-O6lMvhl5j55ZdFPTF5cJfOSeU'
+    logo: 'Company/ConnectOs.jpg'
   },
   {
     role: 'Senior Software Engineer',
@@ -38,7 +39,7 @@ const experiences = [
     dateEnd: 'May 2022',
     techStack: '.Net Core, Azure, Azure DevOps, Sql Server',
     location: 'BGC, Taguig City, Philippines',
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQEgtOEcxlXMog/company-logo_200_200/B4DZfqEQWkHAAQ-/0/1751978673981/accenture_logo?e=1762992000&v=beta&t=SpVaRJKt08wY-ihomVD6gdKuPSxaVqzETcb5MykhCAI'
+    logo: 'Company/Acn.png'
   },
   {
     role: 'Web Development Coordinator',
@@ -47,7 +48,7 @@ const experiences = [
     dateEnd: 'February 2021',
     techStack: '.Net, Angular, Storyline, AnimateCC, HTML & CSS',
     location: 'Makati, NCR, Philippines',
-    logo: 'https://media.licdn.com/dms/image/v2/C510BAQEsPAtuGf5_zw/company-logo_200_200/company-logo_200_200/0/1630564410403/kamal_osman_jamjoom_logo?e=1762992000&v=beta&t=D1OOv6BPicGdXiay_UkVl3aNrcQ6uge_pmclALUkzOs'
+    logo: 'Company/KOJ.jpg'
   },
   {
     role: 'Senior Web Developer',
@@ -56,7 +57,7 @@ const experiences = [
     dateEnd: 'October 2019',
     techStack: '.Net',
     location: 'Pasay, Metro Manila (NCR)',
-    logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQGo1R4Q7-z45g/company-logo_200_200/company-logo_200_200/0/1631308109001?e=1762992000&v=beta&t=ly7onxHeuhBKYaxRf-nA4rP0i1owbxx_w7UPxuj9v90'
+    logo: 'Company/CAAP.jpg'
   },
   {
     role: 'Full Stack Developer',
@@ -71,10 +72,17 @@ const experiences = [
 
 export default function ExperienceSection() {
   return (
-       <Grid container spacing={3}>
-      {experiences.map((exp, i) => (
-        <ExperienceCard key={i} experience={exp} />
-      ))}
-    </Grid>
+    <Grid container spacing={3}>
+      <Grid size={12} mt={2}>
+        <Typography variant="h5" display={'Block'}>
+          Work Experience
+        </Typography>
+      </Grid>
+      {
+        experiences.map((exp, i) => (
+          <ExperienceCard key={i} experience={exp} />
+        ))
+      }
+    </Grid >
   );
 }
