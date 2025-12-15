@@ -33,7 +33,7 @@ export default function ProfileBanner() {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundImage: 'url("/123.jpg")',
+                    backgroundImage: 'url("/Profile/123.jpg")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -67,7 +67,7 @@ export default function ProfileBanner() {
                     <Box sx={{ height: 250, overflow: 'visible'}}>
                         <Box
                             component="img"
-                            src="/Banner1.png"
+                            src="/Profile/Banner1.png"
                             alt="Profile banner"
                             sx={{
                                 position: 'absolute',

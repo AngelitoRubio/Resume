@@ -7,7 +7,7 @@ export default function ProfileCard() {
                 <Grid display="flex" justifyContent="center" alignItems="center" size="grow">
                     <Avatar
                         alt="Angelito Rubio"
-                        src="/banner.png"
+                        src="/Profile/banner.png"
                         sx={{ width: 120, height: 120 }} />
                 </Grid>
                 <Grid>
