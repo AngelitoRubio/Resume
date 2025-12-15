@@ -6,9 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint",  
+    "lint": "eslint",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -33,5 +33,6 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.16",
     "typescript": "^5"
-  },"homepage": "https://angelitorubio.github.io/Resume"
+  },
+  "homepage": "https://angelitorubio.github.io/Resume"
 }
